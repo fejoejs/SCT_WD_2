@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>⏰ Stopwatch</h1>
+  <div class="stopwatch">
+    <div class="time" id="display">00:00:00.000</div>
+    <div class="controls">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="pauseStopwatch()">Pause</button>
+      <button onclick="resumeStopwatch()">Resume</button>
+      <button onclick="resetStopwatch()">Reset</button>
+      <button onclick="recordLap()">Lap</button>
+    </div>
+    <div class="laps">
+      <h2>Lap Times</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Lap No.</th>
+            <th>Lap Time</th>
+            <th>Total Time</th>
+          </tr>
+        </thead>
+        <tbody id="lapRecords"></tbody>
+      </table>
+    </div>
+  </div>
+  <footer>© 2025 Fejoe J.S | <a href="https://github.com/fejoejs/SCT_WD_2" target="_blank">View on GitHub</a> </footer>
+  <script src="script.js"></script>
+</body>
+</html>

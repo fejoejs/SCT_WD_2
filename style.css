@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(ellipse at top, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+
+h1 {
+  font-size: 2.8rem;
+  color: #00f0ff;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 10px #00f0ff, 0 0 30px #00f0ff;
+  animation: glow 2s infinite alternate;
+}
+
+
+.stopwatch {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  width: 90%;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  border: 1px solid #00f0ff44;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.time {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.controls button {
+  background: linear-gradient(145deg, #00f0ff, #005a75);
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px #00f0ff;
+  font-weight: bold;
+}
+
+.controls button:hover {
+  background: #00cce0;
+  transform: scale(1.05);
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
+.laps {
+  margin-top: 20px;
+  max-height: 250px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #00f0ff99;
+  box-shadow: 0 0 10px #00f0ff33 inset;
+}
+
+.laps h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #00f0ff;
+}
+
+.laps table {
+  width: 100%;
+  font-size: 0.95rem;
+  border-collapse: collapse;
+}
+
+.laps th, .laps td {
+  border: 1px solid #00f0ff55;
+  padding: 10px;
+  text-align: center;
+}
+
+.laps tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.laps::-webkit-scrollbar {
+  width: 6px;
+}
+
+.laps::-webkit-scrollbar-thumb {
+  background: #00f0ff;
+  border-radius: 10px;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: center;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00f0ff, 0 0 30px #00f0ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00f0ff, 0 0 60px #00f0ff;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .time {
+    font-size: 2.2rem;
+  }
+
+  .controls button {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
